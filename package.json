@@ -1,0 +1,19 @@
+{
+  "name": "weman_3.2_services",
+  "version": "1.0.0",
+  "description": "En este repositorio se incluye un terminador de front end y un ejemplo para correr en el lado de servidor. Deberá de servir como base para que las estudiantes creen respuestas personalizadas según el tipo el de petición. Los ejercicios a resolver deben cumplir al menos la siguiente lista, pero se espera que se haga alguno más.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viri1994/weman_3.2_services.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viri1994/weman_3.2_services/issues"
+  },
+  "homepage": "https://github.com/viri1994/weman_3.2_services#readme"
+}
