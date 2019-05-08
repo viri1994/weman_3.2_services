@@ -11,6 +11,10 @@ En este repositorio se incluye un terminador de front end y un ejemplo para corr
   * Debe recibir el contenido de un ```<TEXTAREA></TEXTAREA>``` y guardarlo en un archivo en el servidor.
   * Debe de recibir un nombre de usuario y una contraseña, comprobar que sean iguales a los establecidos en el servidor y enviar la respuesta adecuada al cliente.
   
+## Práctica avanzada.
+
+Quizás noten que cuando se usa el form, la página entera cambia y sustituye el contenido por el resultado. Existe un método que permite evitar esta molestia, ese método es conocido como "llamdas asíncronas" o AJAX. En el archivo index.js viene un ejemplo de función asíncrona. Pueden usarla para hacer los mismos ejercicios.
+  
 ## Referencias recomendadas:
 
 https://www.w3schools.com/nodejs/default.asp
