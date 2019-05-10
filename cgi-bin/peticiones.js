@@ -7,6 +7,9 @@ const puerto = '8070';
 const servidor = svr.createServer((pet, resp) => {
 	let respuesta = '';
 	resp.setHeader('Content-Type', 'text/plain');
+	
+
+
 
 	if (pet.method == 'GET') {
 		respuesta = procesaGet(pet);
@@ -23,10 +26,13 @@ const servidor = svr.createServer((pet, resp) => {
 servidor.listen(puerto, host, () => {
 	console.log('La aplicación está corriendo en: ' + host + ':' + puerto);
 });
+
+//	const name = request.query.name;
+	//respo.send(name);
+
+//});
+
 function procesaGet(peticion) {
-
-
-
 const q = url.parse(peticion.url, true); //parsea la url dentro del objeto peticion
 console.log(q);
 console.log("Posible palindromo"+ q.query.texto)
