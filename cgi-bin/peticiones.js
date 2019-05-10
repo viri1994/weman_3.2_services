@@ -1,8 +1,5 @@
 const svr = require('http');
-
 const url = require('url');
-
-
 const fibo = require('./fibonacci.js');
 
 
@@ -11,14 +8,13 @@ const host = '127.0.0.1';
 const puerto = '8070';
 
 const servidor = svr.createServer((pet, resp) => {
-	let respuesta = '';
+	let respuesta = 'HOLA';
 	resp.setHeader('Content-Type', 'text/plain');
 	
-
-
-
 	if (pet.method == 'GET') {
-		//respuesta = procesaGet(pet);
+		respuesta = procesaGet(pet);
+
+		//viri//console.log(fibo.doFibonacci);
 		console.log("Una petición");
 		console.log(fibo.doFibonacci(10));
 		resp.statusCode = 200;
@@ -42,12 +38,16 @@ servidor.listen(puerto, host, () => {
 
 function procesaGet(peticion) {
 const q = url.parse(peticion.url, true); //parsea la url dentro del objeto peticion
-console.log(q);
-console.log("Posible palindromo"+ q.query.texto)
+//console.log("Posible palindromo"+ q.query.numero);
+console.log(q.query.numero);
+return fibo.doFibonacci(parseInt(q.query.numero)).toString();
 	//Aquí necesitan analizar la URL de la petición, ver qué botón se presionó y actuar en consecuencia.
 }
 
 function procesaPost(peticion) {
+
+
+
 	//Igualmente, aquí hay que obtener el valor que venga en la URL...
 	console.log(peticion);
 	console.log(peticion.body);
